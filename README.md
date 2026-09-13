@@ -2,11 +2,12 @@
 
 A lightweight, zero-dependency Windows batch utility that scans a specified folder recursively for all executable types (`.exe`, `.bat`, `.cmd`, `.msi`, `.vbs`, `.ps1`, `.scr`, `.jar`) and blocks them from accessing the internet using Windows Firewall.
 
+Note: Powershell is invoked but should not require additional permissions as it is called from the batch file.
+
 ## Features
-- **Recursive Scanning:** Automatically digs through deeply nested subdirectories.
+- **Recursive Scanning:** Automatically digs through nested subdirectories.
 - **Anti-Duplication:** Wipes out previous script-created rules for a folder before reapplying, ensuring zero clutter.
-- **Robust Path Handling:** Safely processes long filenames, spaces, and complex folder structures (like `(x86)` strings) without crashing.
-- **Typo Protection:** Strictly validates parameter input switches and flags errors immediately.
+- **Robust Path Handling:** Safely processes long filenames, spaces, and complex folder structures (like `(x86)` strings).
 
 ## Usage
 Open a cmd.exe as **Administrator** and execute the script:
