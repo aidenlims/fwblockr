@@ -9,7 +9,7 @@ A lightweight, zero-dependency Windows batch utility that scans a specified fold
 - **Typo Protection:** Strictly validates parameter input switches and flags errors immediately.
 
 ## Usage
-Open a command prompt or terminal as **Administrator** and execute the script:
+Open a cmd.exe as **Administrator** and execute the script:
 
 ```cmd
 fwblockr.bat "C:\Path\To\Folder" [-switch]
