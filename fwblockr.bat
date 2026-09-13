@@ -59,7 +59,7 @@ echo === DRY RUN: Executables found in nested directories ===
 set "fileCount=0"
 for /R "%TARGET_FOLDER%" %%F in (*) do (
     set "ext=%%~xF"
-    for %%E in (.exe .bat .cmd .msi .vbs .ps1 .scr .jar) do (
+    for %%E in (.exe .bat .cmd .vbs .jar) do (
         if /i "!ext!"=="%%E" (
             echo [Found] %%F
             set /a fileCount+=1
@@ -75,7 +75,7 @@ echo === ENFORCING FIREWALL BLOCKS ===
 set "fileCount=0"
 for /R "%TARGET_FOLDER%" %%F in (*) do (
     set "ext=%%~xF"
-    for %%E in (.exe .bat .cmd .msi .vbs .ps1 .scr .jar) do (
+    for %%E in (.exe .bat .cmd .vbs .jar) do (
         if /i "!ext!"=="%%E" (
             set /a fileCount+=1
         )
@@ -101,7 +101,7 @@ powershell -NoProfile -Command "$p = $env:CHECK_PATH; Get-NetFirewallApplication
 
 for /R "%TARGET_FOLDER%" %%F in (*) do (
     set "ext=%%~xF"
-    for %%E in (.exe .bat .cmd .msi .vbs .ps1 .scr .jar) do (
+    for %%E in (.exe .bat .cmd .vbs .jar) do (
         if /i "!ext!"=="%%E" (
             set "filePath=%%F"
             set "fileName=%%~nxF"
